@@ -133,10 +133,6 @@ _protobuf_find_libraries(Protobuf_PROTOC protoc)
 
 endif()
 
-if(UNIX)
-  _protobuf_find_threads()
-endif()
-
 # Set the include directory
 get_target_property(Protobuf_INCLUDE_DIRS protobuf::libprotobuf
   INTERFACE_INCLUDE_DIRECTORIES)
