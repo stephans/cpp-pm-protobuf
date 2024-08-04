@@ -11,8 +11,19 @@ if(protobuf_VERBOSE)
   message(STATUS "Protocol Buffers Configuring...")
 endif()
 
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+include(HunterGate)
+HunterGate(
+  URL "https://github.com/ambroff/hunter/archive/refs/tags/main-2024.07.25.2.tar.gz"
+  SHA1 "191eb42c2f138b668e7aead9f43581e14bbb7afe"
+  LOCAL
+)
+
 # Project
 project(protobuf C CXX)
+
+hunter_add_package(abseil)
+hunter_add_package(ZLIB)
 
 if(protobuf_DEPRECATED_CMAKE_SUBDIRECTORY_USAGE)
   if(CMAKE_PROJECT_NAME STREQUAL "protobuf")
