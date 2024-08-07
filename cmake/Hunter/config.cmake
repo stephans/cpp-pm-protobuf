@@ -1,6 +1,7 @@
 include(hunter_config)
 
 hunter_config(abseil VERSION 20231207.0)
+
 hunter_config(Boost VERSION 1.82.0 CMAKE_ARGS CMAKE_POSITION_INDEPENDENT_CODE=TRUE)
 hunter_config(Catch VERSION 2.2.1)
 hunter_config(OpenSSL VERSION 3.3.1 CMAKE_ARGS BUILD_SHARED_LIBS=ON)
